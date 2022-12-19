@@ -184,6 +184,7 @@ class Inference:
             for target, percent in matchesRules.items():
                 Log.d(f"Target :: {target} --->  Matched :: {percent}") 
                 theNameList.append(target)
+                percent=round(percent,2)
                 thePercentageList.append(percent)
             print()
 
@@ -192,11 +193,13 @@ class Inference:
             if percent >= PERCENT_MATCH:
                 advice.append("True")
                 advice.append(target)
+                percent=round(percent,2)
                 advice.append(str(percent)+ "% sure")
                 return True, target + " " + str(percent) + " % sure"
             else:
                 advice.append("False")
                 advice.append(target)
+                percent=round(percent,2)
                 advice.append(str(percent)+ "% sure")
                 return False, target + " " +   str(percent)+ " % sure"
 

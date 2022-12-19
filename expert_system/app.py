@@ -88,7 +88,7 @@ def page_registeredData():
     symptoms.append(r5)
     write_json(newAnxiety) 
     write_question_json(symptoms)
-    return render_template('registeredData.html',name=name,r1=r1,r2=r2,r3=r3,r4=r4,r5=r5) # Sitemizde görmek istediğimiz şeyi return ettik.
+    return render_template('registeredData.html',name=name,r1=r1,r2=r2,r3=r3,r4=r4,r5=r5) 
  
 
 
